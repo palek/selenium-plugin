@@ -291,6 +291,7 @@ public class PluginImpl extends Plugin implements Action, Serializable,
 		JVMBuilder vmb = new JVMBuilder();
 		// vmb.debug(8000);
 		vmb.systemProperties(null);
+		vmb.vmopts().add("-Xrs");
 		return Channels
 				.newJVM("Selenium Grid", listener, vmb, new FilePath(rootDir),
 						new ClasspathBuilder().add(findStandAloneServerJar()));
