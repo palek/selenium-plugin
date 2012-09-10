@@ -324,6 +324,7 @@ public class PluginImpl extends Plugin implements Action, Serializable,
 		ClasspathBuilder classpath = new ClasspathBuilder()
 				.add(standaloneServerJar);
 		JVMBuilder vmb = new JVMBuilder();
+		vmb.vmopts().add("-Xrs");
 		vmb.systemProperties(properties);
 
 		ServerSocket serverSocket = new ServerSocket();
